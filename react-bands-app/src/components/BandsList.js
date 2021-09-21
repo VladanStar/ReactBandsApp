@@ -1,11 +1,14 @@
 import React from "react";
 import Band from "./Band";
 
-const BandsList = ({bands})=>{
+const BandsList = ({bands, changeCurrentBand})=>{
+    console.log(bands);
+
+
   const allBands = bands.map(band=>{
       return(
           <div className="col-6" key={band.id}>
- <Band />
+ <Band band ={band} changeCurrentBand={changeCurrentBand}/>
           </div>
          
       )
